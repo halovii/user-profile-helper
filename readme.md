@@ -1,4 +1,4 @@
-JS, JSON User profile helper - roadmap.sh project
+JS, JSON User profile helper - roadmap.sh project  
 [Jump to preview](#preview)
 
 Formats a nested user object into values that are more intuitive for UI or API usage (JS roadmaap.sh project)
@@ -12,5 +12,5 @@ Originally this challenge required building a few helper functions that return s
 
 
 ### preview
-[See live on github pages](https://halovii.github.io/user-profile-helper/)
 ![UI/output preview](image-1.png)
+[See live on github pages](https://halovii.github.io/user-profile-helper/)
