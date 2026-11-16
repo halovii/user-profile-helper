@@ -8,3 +8,7 @@ Originally this challenge required building a few helper functions that return s
 ### improvements
 - The original data could be sourced from an API using fetch() and async/await
 - Small formatting or UI improvements to make the data more visually appealing and easy to scan.
+
+
+### preview
+![UI/output preview](image-1.png)
