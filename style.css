@@ -30,7 +30,10 @@ main {
     padding: 0.5rem 2rem;
     flex: 1;
 }
-
+p {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+}
 
 
 /* footer */

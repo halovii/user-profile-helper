@@ -1,5 +1,7 @@
 // product search and filter // 09/07/2026
-// Format a nested user object into values that are easier to show in an interface or return from an API. The final summary should collect the smaller pieces.
+
+// Format a nested user object into values that are easier to show in an interface or return from an API. 
+// The final summary should collect the smaller pieces.
 
 const user = {
     id: 42,
@@ -51,7 +53,7 @@ function createProfileSummary(user) {
         plan: user.account.plan}
 }
 
-
+// console log function output for each
 console.log(createProfileSummary(user));
 console.log(getDisplayName(user));
 console.log(isAccountActive(user));
@@ -60,7 +62,28 @@ console.log(getContactSummary(user));
 
 // DOM - comment section out if testing in just JS
 const myConsole = document.querySelector('.console');
-const newP = document.createElement('p');
+const profileSummary = document.createElement('p');
 
-newP.textContent = JSON.stringify(createProfileSummary(user));
-myConsole.appendChild(newP);
+profileSummary.textContent = `JSON Profile Summary: \n${JSON.stringify(createProfileSummary(user))}`;
+myConsole.appendChild(profileSummary);
+
+
+
+// -- formatted version --
+// iterate over [key: value] pairs from the returned profile summary object, 
+// update paragraph text content and append to the dom
+for (const [key, value] of Object.entries(createProfileSummary(user))) {
+    let p = document.createElement('p');
+
+    // if the current value is an object, iterate over it instead
+    if (typeof value === 'object') {
+        for (const [k, v] of Object.entries(value)) {
+            let p = document.createElement('p');
+            p.textContent = `${k.toUpperCase()}: ${v}`;
+            myConsole.appendChild(p);
+        }
+    } else {
+        p.textContent = `${key.toUpperCase()}: ${value}`;
+        myConsole.appendChild(p);
+    }
+};
