@@ -12,3 +12,4 @@ Originally this challenge required building a few helper functions that return s
 
 ### preview
 ![UI/output preview](image-1.png)
+[See live on github pages](https://halovii.github.io/user-profile-helper/)
